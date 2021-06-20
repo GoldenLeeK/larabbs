@@ -10,6 +10,18 @@
              src="{{ $user->avatar }}"
              alt="{{ $user->name }}">
         <div class="card-body">
+          @if(Auth::user()->followed($user))
+            <form method="POST" action="{{ route('user.unfollow',$user->id) }}">
+              {{ csrf_field() }}
+              <button type="submit" class="btn btn-outline-danger btn-block">取消关注</button>
+            </form>
+          @else
+          <form method="POST" action="{{ route('user.follow',$user->id) }}">
+            {{ csrf_field() }}
+            <button type="submit" class="btn btn-outline-primary btn-block">关注</button>
+          </form>
+          @endif
+          <hr>
           <h5><strong>个人简介</strong></h5>
           <p>{{ $user->introduction }}</p>
           <hr>

@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c41793-716a-4755-a8ae-d3698c44c2a1" name="Default Changelist" comment="" />
+    <list default="true" id="f9c41793-716a-4755-a8ae-d3698c44c2a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/TopicReplied.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/TopicReplied.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/topics/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/topics/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +44,9 @@
         <option value="SCSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -152,18 +182,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads/images/avatars" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/notifications/types" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\phpstudy_pro\WWW\larabbs\public\uploads\images\avatars" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\phpstudy_pro\WWW\larabbs\app\Models\Traits" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\phpstudy_pro\WWW\larabbs\resources\views\notifications\types" />
+      <recent name="E:\phpstudy_pro\WWW\larabbs\public\uploads\images\avatars" />
     </key>
   </component>
   <component name="RunManager">
@@ -190,22 +221,44 @@
       <workItem from="1623075401174" duration="4420000" />
       <workItem from="1623115119267" duration="755000" />
       <workItem from="1623332307956" duration="5116000" />
-      <workItem from="1623412048909" duration="37920000" />
+      <workItem from="1623412048909" duration="40665000" />
+      <workItem from="1623768665846" duration="2394000" />
+      <workItem from="1623938822337" duration="4502000" />
+      <workItem from="1623979212843" duration="39000" />
+      <workItem from="1624021954340" duration="8306000" />
+      <workItem from="1624065171647" duration="9000" />
+      <workItem from="1624182408180" duration="2826000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623562121815">
+    <state x="488" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1624028644103">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="488" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1623562121815" />
-    <state x="659" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1622291041758">
+    <state x="488" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1624028644103" />
+    <state x="659" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1624025698376">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="659" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1622291041758" />
+    <state x="659" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1624025698376" />
+    <state x="709" y="295" key="FileChooserDialogImpl" timestamp="1623589524104">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="709" y="295" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1623589524104" />
     <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1622286624074">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -222,10 +275,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1622286624074" />
-    <state x="659" y="260" key="NewPhpClassDialog" timestamp="1623576155791">
+    <state x="659" y="260" key="NewPhpClassDialog" timestamp="1624025653543">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="659" y="260" key="NewPhpClassDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1623576155791" />
+    <state x="659" y="260" key="NewPhpClassDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1624025653543" />
     <state x="745" y="463" key="NewPhpFileDialog" timestamp="1623564535967">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -234,11 +287,11 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="430" y="184" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1622983664079" />
-    <state x="1101" y="0" width="757" height="1080" key="find.popup" timestamp="1622983334670">
+    <state x="1101" y="0" width="757" height="1080" key="find.popup" timestamp="1624182928780">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="874" y="0" width="600" height="864" key="find.popup/0.0.1474.864@0.0.1474.864" timestamp="1622971286480" />
-    <state x="1101" y="0" width="757" height="1080" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1622983334670" />
+    <state x="1101" y="0" width="757" height="1080" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1624182928780" />
     <state x="585" y="250" key="run.anything.popup" timestamp="1623564568272">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

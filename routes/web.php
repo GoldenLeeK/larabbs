@@ -36,7 +36,10 @@ Route::post('email/resend', 'Auth\VerificationController@resend')->name('verific
 
 //用户资源路由
 Route::resource('users', 'UsersController', ['show', 'edit', 'update']);
-
+//用户关注
+Route::post('users/follow/{user}', 'FollowersController@follow')->name('user.follow');
+//用户取消关注
+Route::post('users/unfollow/{user}', 'FollowersController@unfollow')->name('user.unfollow');
 //帖子资源路由
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
@@ -52,3 +55,5 @@ Route::resource('notifications', 'NotificationsController', ['only' => 'index'])
 
 //无权限路由
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
+
+

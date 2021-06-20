@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Traits\ActiveUserHelper;
+use App\Models\Traits\FollowerUserHelper;
 use App\Models\Traits\LastActivedAtHelper;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -11,6 +12,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
+use Symfony\Component\VarDumper\Dumper\DataDumperInterface;
 
 class User extends Authenticatable implements MustVerifyEmail {
     use HasFactory, MustVerifyEmailTrait, HasRoles;
@@ -19,7 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail {
         notify as  protected laravelNotify;
     }
 
-    use ActiveUserHelper, LastActivedAtHelper;
+    use ActiveUserHelper, LastActivedAtHelper, FollowerUserHelper;
 
     public function notify($instance)
     {
@@ -32,7 +34,6 @@ class User extends Authenticatable implements MustVerifyEmail {
         if (method_exists($instance, 'toDatabase')) {
             $this->increment('notification_count');
         }
-
         $this->laravelNotify($instance);
     }
 
@@ -107,6 +108,17 @@ class User extends Authenticatable implements MustVerifyEmail {
 
     }
 
-    
+    public function following()
+    {
+        return $this->belongsToMany(self::class, 'followers', 'follower_id', 'user_id');
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany(self::class, 'followers', 'user_id', 'follower_id');
+    }
+
+
+
 
 }

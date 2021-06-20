@@ -18,7 +18,9 @@
 
             <div class="list-unstyled notification-list">
               @foreach ($notifications as $notification)
-                @include('notifications.types._' . Str::snake(class_basename($notification->type)))
+                <div>
+                  @include('notifications.types._' . Str::snake(class_basename($notification->type)))
+                </div>
               @endforeach
 
               {!! $notifications->render() !!}

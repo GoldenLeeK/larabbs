@@ -21,6 +21,20 @@
               </a>
             </div>
           </div>
+          <hr>
+          <div class="text-center">
+            @if(Auth::user()->followed($topic->user))
+              <form method="POST" action="{{ route('user.unfollow',$topic->user->id) }}">
+                {{ csrf_field() }}
+                <button type="submit" class="btn btn-outline-danger btn-block">取消关注</button>
+              </form>
+            @else
+              <form method="POST" action="{{ route('user.follow',$topic->user->id) }}">
+                {{ csrf_field() }}
+                <button type="submit" class="btn btn-outline-primary btn-block">关注</button>
+              </form>
+            @endif
+          </div>
         </div>
       </div>
     </div>

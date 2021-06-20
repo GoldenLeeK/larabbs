@@ -2,25 +2,26 @@
 
 namespace App\Notifications;
 
-use App\Models\Reply;
+use App\Models\Follower;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class TopicReplied extends Notification implements ShouldQueue {
+class Followed extends Notification implements ShouldQueue{
     use Queueable;
 
-    protected $reply;
+    protected $user;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(Reply $reply)
+    public function __construct(User $user)
     {
-        $this->reply = $reply;
+        $this->user = $user;
     }
 
     /**
@@ -31,7 +32,7 @@ class TopicReplied extends Notification implements ShouldQueue {
      */
     public function via($notifiable)
     {
-        return ['database', 'mail'];
+        return ['database','mail'];
     }
 
     /**
@@ -42,9 +43,9 @@ class TopicReplied extends Notification implements ShouldQueue {
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage())
-            ->line('你的话题有新的回复')
-            ->action('查看回复', $this->reply->topic->link(['#replay' . $this->reply->id]));
+        return (new MailMessage)
+            ->line($this->user->name . '关注你了')
+            ->action('查看他/她的主页', route('users.show', $this->user->id));
     }
 
     /**
@@ -62,19 +63,11 @@ class TopicReplied extends Notification implements ShouldQueue {
 
     public function toDatabase($notifiable)
     {
-        $topic = $this->reply->topic;
-        $link  = $topic->link(['#reply' . $this->reply->id]);
-
-        // 存入数据库里的数据
         return [
-            'reply_id'    => $this->reply->id,
-            'reply_body'  => $this->reply->body,
-            'user_id'     => $this->reply->user->id,
-            'user_name'   => $this->reply->user->name,
-            'user_avatar' => $this->reply->user->avatar,
-            'topic_link'  => $link,
-            'topic_id'    => $topic->id,
-            'topic_title' => $topic->title,
+            'follower_id'     => $this->user->id,
+            'follower_name'   => $this->user->name,
+            'follower_avatar' => $this->user->avatar,
+            'link'            => route('users.show', $this->user->id),
         ];
     }
 }
