@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,10 +53,6 @@ Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]
 
 //通知列表
 Route::resource('notifications', 'NotificationsController', ['only' => 'index']);
-
 //无权限路由
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
-
-Route::prefix('api/v1',)
-
 
