@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c41793-716a-4755-a8ae-d3698c44c2a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/TopicsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/TopicReplied.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/TopicReplied.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/administrator/settings/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/administrator/settings/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/nginx.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/nginx.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/topics/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/topics/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/administrator_settings/site.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/administrator_settings/site.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +231,13 @@
       <workItem from="1623979212843" duration="39000" />
       <workItem from="1624021954340" duration="8306000" />
       <workItem from="1624065171647" duration="9000" />
-      <workItem from="1624182408180" duration="2826000" />
+      <workItem from="1624182408180" duration="6177000" />
+      <workItem from="1624246664082" duration="78000" />
+      <workItem from="1624280821365" duration="867000" />
+      <workItem from="1624285030085" duration="3016000" />
+      <workItem from="1626852215112" duration="133000" />
+      <workItem from="1626919933627" duration="99000" />
+      <workItem from="1626938466180" duration="56000" />
     </task>
     <servers />
   </component>
@@ -292,10 +302,10 @@
     </state>
     <state x="874" y="0" width="600" height="864" key="find.popup/0.0.1474.864@0.0.1474.864" timestamp="1622971286480" />
     <state x="1101" y="0" width="757" height="1080" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1624182928780" />
-    <state x="585" y="250" key="run.anything.popup" timestamp="1623564568272">
+    <state x="585" y="250" key="run.anything.popup" timestamp="1624196403289">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="585" y="250" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1623564568272" />
+    <state x="585" y="250" key="run.anything.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1624196403289" />
     <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1622270974093">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

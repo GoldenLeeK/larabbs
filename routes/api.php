@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->prefix('api/v1')->get('/test', function (Request $request) {
+    dd(1232132);
 });
+
+

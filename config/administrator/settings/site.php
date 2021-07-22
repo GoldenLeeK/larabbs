@@ -52,8 +52,8 @@ return [
     // 数据即将保存时触发的钩子，可以对用户提交的数据做修改
     'before_save' => function (&$data) {
         // 为网站名称加上后缀，加上判断是为了防止多次添加
-        if (strpos($data['site_name'], 'Powered by LaraBBS') === false) {
-            $data['site_name'] .= ' - Powered by LaraBBS';
+        if (strpos($data['site_name'], 'Powered by ' . env('APP_NAME')) === false) {
+            $data['site_name'] .= ' - Powered by ' . env('APP_NAME');
         }
     },
 
