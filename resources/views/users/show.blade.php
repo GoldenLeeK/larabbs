@@ -10,7 +10,7 @@
              src="{{ $user->avatar }}"
              alt="{{ $user->name }}">
         <div class="card-body">
-          @if(Auth::user()->followed($user))
+          @if(Auth::user() && Auth::user()->followed($user))
             <form method="POST" action="{{ route('user.unfollow',$user->id) }}">
               {{ csrf_field() }}
               <button type="submit" class="btn btn-outline-danger btn-block">取消关注</button>

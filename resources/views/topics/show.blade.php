@@ -23,7 +23,7 @@
           </div>
           <hr>
           <div class="text-center">
-            @if(Auth::user()->followed($topic->user))
+            @if(Auth::user() && Auth::user()->followed($topic->user))
               <form method="POST" action="{{ route('user.unfollow',$topic->user->id) }}">
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-outline-danger btn-block">取消关注</button>
