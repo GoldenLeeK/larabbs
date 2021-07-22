@@ -101,7 +101,7 @@ class User extends Authenticatable implements MustVerifyEmail {
 
     public function setAvatarAttribute($path)
     {
-        if (!\Illuminate\Support\Str::startsWith($path, 'http') || !\Illuminate\Support\Str::startsWith($path, 'https')) {
+        if (!\Illuminate\Support\Str::startsWith($path, 'http') && !\Illuminate\Support\Str::startsWith($path, 'https')) {
             $path = config('app.url') . "/uploads/images/avatars/$path";
         }
         $this->attributes['avatar'] = $path;

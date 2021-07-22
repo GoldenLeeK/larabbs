@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Support\Facades\Schema;
 class AppServiceProvider extends ServiceProvider {
     /**
      * Register any application services.
@@ -31,6 +31,6 @@ class AppServiceProvider extends ServiceProvider {
         \App\Models\Link::observe(\App\Observers\LinkObserver::class);
         \App\Models\Follower::observe(\App\Observers\FollowerObserver::class);
 
-        //
+        Schema::defaultStringLength(191);
     }
 }
