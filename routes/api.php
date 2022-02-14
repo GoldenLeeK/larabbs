@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->prefix('api/v1')->get('/test', function (Request $request) {
-    dd(1232132);
+Route::prefix('v1')->name('api.v1.')->group(function () {
+
 });
 
 
