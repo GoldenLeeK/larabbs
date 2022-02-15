@@ -12,9 +12,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
-use Symfony\Component\VarDumper\Dumper\DataDumperInterface;
 
-class User extends Authenticatable implements MustVerifyEmail {
+class User extends Authenticatable implements MustVerifyEmail
+{
     use HasFactory, MustVerifyEmailTrait, HasRoles;
 
     use Notifiable {
@@ -48,6 +48,7 @@ class User extends Authenticatable implements MustVerifyEmail {
         'password',
         'introduction',
         'avatar',
+        'phone',
     ];
 
     /**
@@ -117,8 +118,6 @@ class User extends Authenticatable implements MustVerifyEmail {
     {
         return $this->belongsToMany(self::class, 'followers', 'user_id', 'follower_id');
     }
-
-
 
 
 }

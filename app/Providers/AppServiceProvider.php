@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\ServiceProvider;
-class AppServiceProvider extends ServiceProvider {
+
+class AppServiceProvider extends ServiceProvider
+{
     /**
      * Register any application services.
      *
@@ -29,5 +32,6 @@ class AppServiceProvider extends ServiceProvider {
         \Illuminate\Pagination\Paginator::useBootstrap();
         \App\Models\Link::observe(\App\Observers\LinkObserver::class);
         \App\Models\Follower::observe(\App\Observers\FollowerObserver::class);
+        JsonResource::withoutWrapping();
     }
 }
