@@ -25,6 +25,9 @@ Route::prefix('v1')
                 //用户注册
                 Route::post('users', 'UsersController@store')
                     ->name('user.store');
+                //图片验证码
+                Route::post('captchas', 'CaptchasController@store')
+                    ->name('captchas.store');
             });
 
     });
