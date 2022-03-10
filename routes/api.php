@@ -28,6 +28,15 @@ Route::prefix('v1')
                 //图片验证码
                 Route::post('captchas', 'CaptchasController@store')
                     ->name('captchas.store');
+
+                //第三方登录
+                Route::post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
+                    ->where('socials_type', 'wechat')
+                    ->name('socials.authorizations.store');
+                //用户登录
+                Route::post('authorizations', 'AuthorizationsController@store')
+                    ->name('authorizations.store');
+
             });
 
     });

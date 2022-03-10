@@ -6,14 +6,15 @@ use App\Models\Traits\ActiveUserHelper;
 use App\Models\Traits\FollowerUserHelper;
 use App\Models\Traits\LastActivedAtHelper;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContracts;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmailContracts, JWTSubject
 {
     use HasFactory, MustVerifyEmailTrait, HasRoles;
 
@@ -22,6 +23,16 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     use ActiveUserHelper, LastActivedAtHelper, FollowerUserHelper;
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 
     public function notify($instance)
     {
@@ -49,6 +60,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'introduction',
         'avatar',
         'phone',
+        'wechat_unionid',
+        'wechat_openid',
     ];
 
     /**
