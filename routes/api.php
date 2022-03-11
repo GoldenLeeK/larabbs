@@ -36,6 +36,10 @@ Route::prefix('v1')
                 //用户登录
                 Route::post('authorizations', 'AuthorizationsController@store')
                     ->name('authorizations.store');
+                //刷新token
+                Route::put('authorizations/current', 'AuthorizationsController@update');
+                //删除token
+                Route::delete('authorizations/current', 'AuthorizationsController@destory');
 
             });
 

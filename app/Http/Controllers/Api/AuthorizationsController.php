@@ -60,10 +60,9 @@ class AuthorizationsController extends Controller
                 }
                 break;
         }
+        $token = auth('api')->login($user);
+        return $this->respondWithToken($token)->setStatusCode(201);
 
-        return response()->json([
-            'token' => $user->id,
-        ]);
     }
 
     public function store(AuthorizationRequest $request)
@@ -79,12 +78,29 @@ class AuthorizationsController extends Controller
             throw new AuthenticationException('账号或者密码错误');
         }
 
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'Bearer',
-            'expires_in' => \Auth::guard('api')->factory()->getTTL() * 60,
-        ])->setStatusCode(201);
+        return $this->respondWithToken($token)->setStatusCode(201);
 
     }
 
+    protected function respondWithToken($token)
+    {
+
+        return response()->json([
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+            'expires_in' => auth('api')->factory()->getTTL() * 60,
+        ]);
+    }
+
+    public function update()
+    {
+        $token = auth('api')->refresh();
+        return $this->respondWithToken($token);
+    }
+
+    public function destory()
+    {
+        auth('api')->logout();
+        return response(null, 204);
+    }
 }
