@@ -72,6 +72,8 @@ class User extends Authenticatable implements MustVerifyEmailContracts, JWTSubje
     protected $hidden = [
         'password',
         'remember_token',
+        'wechat_unionid',
+        'wechat_openid',
     ];
 
     /**

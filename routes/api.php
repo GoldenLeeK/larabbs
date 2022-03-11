@@ -41,6 +41,17 @@ Route::prefix('v1')
                 //删除token
                 Route::delete('authorizations/current', 'AuthorizationsController@destory');
 
+                //某个用户详情
+                Route::get('users/{user}', 'UsersController@show')
+                    ->name('users.show');
+
+                //需要登录的路由
+                Route::middleware('auth:api')->group(function () {
+                    //当前登录的用户信息详情
+                    Route::get('user', 'UsersController@me')
+                        ->name('user.show');
+                });
+
             });
 
     });
