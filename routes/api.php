@@ -47,6 +47,10 @@ Route::prefix('v1')
                 //话题分类列表
                 Route::get('categories', 'CategoriesController@index')
                     ->name('categories.index');
+                //话题列表、详情
+                Route::resource('topics', 'TopicsController')->only([
+                    'index', 'show'
+                ]);
 
                 //需要登录的路由
                 Route::middleware('auth:api')->group(function () {
@@ -59,6 +63,10 @@ Route::prefix('v1')
                     //上传图片
                     Route::post('images', 'ImagesController@store')
                         ->name('image.store');
+                    //发布、更新、删除话题
+                    Route::resource('topics', 'TopicsController')->only([
+                        'store', 'update', 'destroy'
+                    ]);
 
                 });
 
