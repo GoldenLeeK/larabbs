@@ -44,6 +44,9 @@ Route::prefix('v1')
                 //某个用户详情
                 Route::get('users/{user}', 'UsersController@show')
                     ->name('users.show');
+                //话题分类列表
+                Route::get('categories', 'CategoriesController@index')
+                    ->name('categories.index');
 
                 //需要登录的路由
                 Route::middleware('auth:api')->group(function () {
@@ -51,9 +54,12 @@ Route::prefix('v1')
                     Route::get('user', 'UsersController@me')
                         ->name('user.show');
                     //用户信息更新
-                    Route::patch('user', 'UsersController@update');
+                    Route::patch('user', 'UsersController@update')
+                        ->name('user.update');
                     //上传图片
-                    Route::post('images', 'ImagesController@store');
+                    Route::post('images', 'ImagesController@store')
+                        ->name('image.store');
+
                 });
 
             });
