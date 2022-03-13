@@ -51,6 +51,8 @@ Route::prefix('v1')
                 Route::resource('topics', 'TopicsController')->only([
                     'index', 'show'
                 ]);
+                Route::get('users/{user}/topics', 'TopicsController@userIndex')
+                    ->name('users.topics.index');
 
                 //需要登录的路由
                 Route::middleware('auth:api')->group(function () {
