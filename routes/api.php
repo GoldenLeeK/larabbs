@@ -50,6 +50,10 @@ Route::prefix('v1')
                     //当前登录的用户信息详情
                     Route::get('user', 'UsersController@me')
                         ->name('user.show');
+                    //用户信息更新
+                    Route::patch('user', 'UsersController@update');
+                    //上传图片
+                    Route::post('images', 'ImagesController@store');
                 });
 
             });
