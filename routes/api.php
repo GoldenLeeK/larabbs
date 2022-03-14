@@ -51,6 +51,7 @@ Route::prefix('v1')
                 Route::resource('topics', 'TopicsController')->only([
                     'index', 'show'
                 ]);
+                //指定用戶帖子列表
                 Route::get('users/{user}/topics', 'TopicsController@userIndex')
                     ->name('users.topics.index');
 
