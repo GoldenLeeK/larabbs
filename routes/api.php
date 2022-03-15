@@ -73,7 +73,9 @@ Route::prefix('v1')
                     //话题添加回复
                     Route::post('topics/{topic}/replies', 'RepliesController@store')
                         ->name('topics.replies.store');
-
+                    //删除话题回复
+                    Route::delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
+                        ->name('topics.replies.destroy');
                 });
 
             });

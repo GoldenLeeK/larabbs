@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Reply extends Model {
     use HasFactory;
 
-    protected $fillable = ['content'];
+    protected $fillable = ['body','topic_id'];
 
     public function user()
     {
