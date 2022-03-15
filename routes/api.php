@@ -70,6 +70,9 @@ Route::prefix('v1')
                     Route::resource('topics', 'TopicsController')->only([
                         'store', 'update', 'destroy'
                     ]);
+                    //话题添加回复
+                    Route::post('topics/{topic}/replies', 'RepliesController@store')
+                        ->name('topics.replies.store');
 
                 });
 
