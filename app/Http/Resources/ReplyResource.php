@@ -21,6 +21,8 @@ class ReplyResource extends JsonResource
             'content' => $this->content,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'user' => new UserResource($this->whenLoaded('user')),
+            'topic' => new TopicResource($this->whenLoaded('topic')),
         ];
     }
 }

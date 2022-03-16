@@ -51,6 +51,12 @@ Route::prefix('v1')
                 Route::resource('topics', 'TopicsController')->only([
                     'index', 'show'
                 ]);
+                //话题回复列表
+                Route::get('topics/{topic}/replies', 'RepliesController@index')
+                    ->name('topic.replies.index');
+                //指定用户的回复列表
+                Route::get('users/{user}/replies', 'RepliesController@userIndex')
+                    ->name('user.replies.index');
                 //指定用戶帖子列表
                 Route::get('users/{user}/topics', 'TopicsController@userIndex')
                     ->name('users.topics.index');
