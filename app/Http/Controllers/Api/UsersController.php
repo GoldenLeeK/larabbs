@@ -62,4 +62,6 @@ class UsersController extends Controller
         return (new UserResource($request->user('api')))->showSensitiveFields();
 
     }
+
+
 }

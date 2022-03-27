@@ -14,4 +14,19 @@ class NotificationsController extends Controller
 
         return NotificationResource::collection($notifications);
     }
+
+    public function stats(Request $request)
+    {
+        return response()->json([
+            'read_count' => $request->user()->notification_count,
+        ]);
+
+    }
+
+    public function read(Request $request)
+    {
+        $request->user()->markAsRead();
+
+        return response(null, 204);
+    }
 }

@@ -85,6 +85,12 @@ Route::prefix('v1')
                     //消息通知列表
                     Route::get('notifications', 'NotificationsController@index')
                         ->name('notifications.index');
+                    //消息通知统计
+                    Route::get('notifications/stats', 'NotificationsController@stats')
+                        ->name('notifications.stats');
+                    //消息已读
+                    Route::patch('user/read/notifications', 'NotificationsController@read')
+                        ->name('user.notifications.read');
                 });
 
             });
